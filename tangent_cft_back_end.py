@@ -172,6 +172,7 @@ class TangentCFTBackEnd:
             line = file.readline().strip("\n")
         "The id shows the id that should be assigned to the next character to be encoded (a character that is not seen)" \
         "Therefore there is a plus one in the following lines"
-        self.node_id = max(list(self.encoder_map_node.values())) + 1
-        self.edge_id = max(list(self.encoder_map_edge.values())) + 1
+        print()
+        self.node_id = max(list(self.encoder_map_node.values())) + 1 if len(self.encoder_map_node.values()) > 0 else 0
+        self.edge_id = max(list(self.encoder_map_edge.values())) + 1 if len(self.encoder_map_node.values()) > 0 else 0
         file.close()
