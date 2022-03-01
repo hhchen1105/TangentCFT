@@ -28,7 +28,7 @@ vector_size,300
 ```
 The next step is to decide to train a cft model. Here is a command to train and do retrieval with SLT representation:
 ```
-python3 tangent_cft_front_end.py -ds "/NTCIR12_MathIR_WikiCorpus_v2.1.0/MathTagArticles" -cid 1  -em slt_encoder.tsv --mp slt_model --rf slt_ret.tsv --qd "/TestQueries" --ri 1
+python tangent_cft_front_end.py -ds "./NTCIR-12_MathIR_Wikipedia_Corpus/MathTagArticles" -cid 1  -em slt_encoder.tsv --mp slt_model --rf slt_ret.tsv --qd "./TestQueries" --ri 1
 ```
 The command above, uses the configuration file, with id 1, use the NTCIR 12 dataset to train the model based on slt representation and saves the encoding map in slt_encoder.csv file and the cft model in file slt_model. The retrieval result with SLT representation is saved in file slt_ret.tsv 
 Next, use the following command to do the same for OPT representation:
